@@ -1,0 +1,895 @@
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+
+
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.void {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    cursor: pointer;
+}
+
+.orange {
+    background-color: #FF8400;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #151B28;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+
+    font-size: 24px;
+    font-family: "Montserrat-ExtraBold";
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.buttons button:hover {
+    transition: color 0.3s;
+    color: #007BFF;
+}
+
+.language select {
+    color: #fff;
+    padding: 0 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+}
+
+.language option {
+    color: black;
+}
+
+.start-search .void {
+    height: 56px;
+    width: 156px;
+}
+
+.start-search .orange {
+    height: 56px;
+    width: 114px;
+}
+
+/* Навигация */
+.header-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    padding: 25px 25px 10px 25px;
+}
+
+.header-nav nav ul li a {
+    text-decoration: none;
+    font-family: "BebasNeue-Regular";
+    color: #fff;
+    font-size: 22.5px;
+    transition: color 0.3s;
+}
+
+.header-nav nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Общие стили для секции hero */
+.hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url('/images/Hero-\(1\).png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Заголовок внутри hero */
+.hero h1 {
+    font-family: "BebasNeue-Regular";
+    font-size: 86px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    color: #fff;
+    max-width: 800px;
+}
+
+.hero-text{
+    max-width: 580px;
+}
+/* Стиль для кнопок */
+.hero-buttons button {
+    padding: 15px;
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-buttons button:hover {
+    transition: color 0.3s;
+    color: #007BFF;
+
+}
+
+/* Общие стили для секции pick-your-sport */
+.pick-your-sport {
+    padding: 80px 20px;
+    background-color: #151B28;
+    color: #fff;
+}
+
+/* Контейнер внутри секции */
+.sports-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Заголовок секции */
+.pick-your-sport h2 {
+    font-family: "BebasNeue-Regular";
+    font-size: 54.9px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Описание под заголовком */
+.pick-your-sport p {
+    font-family: 'Roboto';
+    font-size: 18px;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* Сетка карточек спортов */
+.sport-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Каждая карточка спорта */
+.sport-card {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slova h3 {
+    font-family: "Montserrat-ExtraBold";
+    font-size: 22.5px;
+    margin-bottom: 10px;
+    color: #FF8400;
+}
+
+.slova p {
+    font-family: Roboto;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.sport-btn button {
+    padding: 12px 24px;
+    font-family: "BebasNeue-Regular";
+    font-size: 18px;
+    border: 2px solid #FF8400;
+    background-color: transparent;
+    color: #FF8400;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.sport-btn button:hover {
+    color: #007BFF;
+    border-color: #007BFF;
+}
+
+/* Кнопка в конце секции */
+.btn-ep {
+    padding-bottom: 2.5rem;
+}
+
+.btn-ep button:hover {
+    transition: color 0.3s;
+    color: #007BFF;
+}
+
+/* Общие стили для sub-hero */
+.sub-hero {
+    padding: 80px 20px;
+    background-image: url('/images/Sub-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 760px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Контейнер внутри секции */
+.sub-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Заголовок */
+.sub-hero-text h2 {
+    font-family: "BebasNeue-Regular";
+    font-size: 54.9px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Описание */
+.sub-hero-text p {
+    font-family: Roboto;
+    font-size: 18px;
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Стиль для кнопок внутри sub-hero */
+.sub-hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub-hero-btns button {
+    padding: 12px 24px;
+    transition: color 0.3s;
+}
+
+.sub-hero-btns button:hover {
+    color: #007BFF;
+
+}
+
+/* Общий стиль секции process*/
+.the-process {
+    padding: 60px 20px 0px 20px;
+    background-image: url('/images/process.png');
+    background-size: cover;
+    max-height: 1250px;
+
+}
+
+.the-process h2 {
+    font-family: "BebasNeue-Regular";
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.the-process-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+/* Карточки — занимают всю ширину */
+.process-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Каждая карточка */
+.process-card {
+    background-color: #1C2534;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    gap:10px;
+}
+
+/* Группа иконки и текста */
+.process-card-text {
+    display: flex;
+    align-items: center;
+}
+
+/* Иконка */
+.process-card-text img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* Текст */
+.process-card-text p {
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    color: #ddd;
+    margin: 0;
+}
+
+/* Кнопка "+" — справа, с отступом */
+.process-card button {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-color: #ff8400;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.process-card button:hover {
+    background-color: #007BFF;
+
+}
+
+/* Общее оформление секции our-athletes */
+.our-athletes {
+    padding: 50px;
+    background-image: url('/images/Carousel.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Контейнер внутри секции */
+.atheltes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Заголовок секции*/
+.atheltes-container h2 {
+    color: #fff;
+    font-family: "BebasNeue-Regular";
+    font-size: 54.9px;
+}
+
+/* Сетка карточек спортсменов */
+.athletes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.athletes-card {
+    width: auto;               
+    height: 456px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Внутренний блок текста и кнопки, размещенный внизу */
+.athletes-card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовки внутри карточки */
+.athletes-card-text h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-family: "BebasNeue-Regular";
+    font-size: 44px;
+}
+
+/* Кнопка */
+.athletes-card-text button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: "BebasNeue-Regular";
+    font-size: 22.5px;
+    border: solid 2px #FF8400;
+    background-color: transparent;
+    color: #FF8400;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all ease 0.3s;
+}
+
+.athletes-card-text button:hover {
+    color: #007BFF
+}
+
+.athletes-card-1 {
+    background-image: url('/images/Card.png');
+}
+
+.athletes-card-2 {
+    background-image: url('/images/Card-\(1\).png');
+}
+
+.athletes-card-3 {
+    background-image: url('/images/Card-\(2\).png');
+}
+
+/*Общие стили для success-stories*/
+.success-stories {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #151B28;
+    color: #fff;
+}
+
+/*Контейнер*/
+.success-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.success-container h2 {
+    text-align: center;
+    font-family: "BebasNeue-Regular";
+    font-size: 54.9px;
+}
+
+/*карточка с текстом*/
+.success-card {
+    position: relative;
+    display: flex;
+}
+
+.success-card-text-container {
+    position: absolute;
+    width: 520px;
+    height: 500px;
+    background-color: #333B48;
+    margin-top: 100px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.success-card-text {
+    padding: 39px;
+
+}
+
+.success-card-text h2 {
+    font-family: "BebasNeue-Regular";
+    font-size: 18px;
+    color: #FF8400;
+    text-align: left;
+    margin: 0;
+}
+
+.success-card-text h3 {
+    font-family: "BebasNeue-Regular";
+    font-size: 28.1px;
+    padding-top: 7.5px;
+    margin: 0;
+}
+
+.success-card-text p {
+    font-family: 'Roboto';
+    line-height: 1.75;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+/*Карточка с картинкой*/
+.success-card-img {
+    margin-left: auto;
+}
+
+.success-card-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Так называемые кнопки*/
+.btns {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 55px;
+
+}
+
+/*Стили для our-team*/
+.our-team {
+    background-image: url('images/Our-team-\(1\).png');
+    padding: 50px;
+    padding-bottom: 0px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ourteam-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ourteam-text {
+    margin: 0 auto;
+    max-width: 650px;
+    
+}
+
+.ourteam-text h2 {
+    margin: 0;
+    text-align: center;
+    font-family: "BebasNeue-Regular";
+    font-size: 54.9px;
+    color: #fff;
+}
+
+.ourteam-text p {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.ourteam-text button {
+    display: flex;
+    margin: 0 auto;
+    transition: all ease 0.3s;
+}
+
+.ourteam-text button:hover {
+    color: #007BFF
+}
+
+.ourteam-pic {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+}
+
+.ourteam-pic img {
+    border-radius: 5px;
+    width: auto;
+    height: 100%;
+    max-width: 100%; 
+}
+
+/*Общие стили для img-hero 2*/
+.img-hero {
+    padding: 50px;
+    background-image: url('images/Sub-hero-\(1\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.img-hero-container {
+    max-width: 1200px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+.img-hero-text {
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-hero-text h2 {
+    font-size: 86.8px;
+    font-family: "BebasNeue-Regular";
+    color: #ffff;
+
+}
+
+/*Общие стили для регистрации*/
+.sign-up {
+    position: relative;
+    padding: 50px;
+    background-image: url('images/Sign-up-\(1\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 27, 40, 0.95);
+    z-index: 1;
+}
+
+.sign-up-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 440px;
+    text-align: center;
+    z-index: 2;
+}
+
+.sign-up-text {
+    padding-top: 79px;
+}
+
+.sign-up-text h3 {
+    color: #FF8400;
+    font-size: 54.9px;
+    font-family: "BebasNeue-Regular";
+    margin: 0;
+}
+
+.sign-up-text p {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Roboto';
+
+}
+
+/* Основные стили input и кнопки */
+.input-group {
+    max-width: 510px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+
+/* Контейнер для input и кнопки */
+.input-container {
+    display: flex;
+    align-items: stretch;
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Обертка для input и лейбла внутри */
+.input-wrapper {
+    position: relative;
+    flex: 1;
+
+}
+
+/* Позиционирование лейбла внутри input-wrapper */
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    bottom: 5px;
+    background: transparent;
+    padding: 0 4px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Поле ввода */
+.text-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-top: 35px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 132, 0, 0.80);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.text-input::placeholder {
+    color: rgba(255, 132, 0, 0.15);
+}
+
+/* Кнопка sign*/
+.btn-signin {
+    background-color: #FF8400;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 22.5px;
+    font-family: 'BebasNeue-Regular';
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.btn-signin:hover {
+    color:#007BFF
+}
+
+/*Стили для футера*/
+footer{
+    padding: 50px;
+    background-color: #151B28;
+}
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-footer{
+    margin-top: 15px;
+}
+.logo-footer a{
+    font-size: 24px;
+    font-family: "Montserrat-ExtraBold";
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    
+}
+
+.logo-footer img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-footer nav ul li a{
+    font-size:14.4px;
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #6B7B8F;
+    display: flex;
+    justify-content: flex-end;
+    text-align:end;
+}
+.nav-footer nav ul li{
+    list-style: none;
+    padding-bottom: 10px;
+    
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    
+}
+
+.footer-section {
+    flex: 1; 
+    max-width: 200px; 
+    padding-right: 20px;
+}
+.social-media{
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap:3px;
+    
+}
+.social-links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 4px;
+}
+.footer-cpr{
+    margin-top: 30px;
+}
+.footer-cpr p{
+    color: #FF8400;
+    font-size: 11.5px;
+    font-family: 'Roboto';
+
+}
+

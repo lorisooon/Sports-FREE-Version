@@ -1,0 +1,325 @@
+/*Кнопка меню, пока что скрыт*/
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.inside-menu-button {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+/* Адаптив для ширины ipad */
+@media (max-width: 744px) {
+
+    .start-search .orange {
+        height: 40px;
+        width: 130px;
+    }
+
+    .logo-buttons {
+        padding-bottom: 20px;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        width: 250px;
+        height: 100%;
+        background-color: #151B28;
+        padding: 20px;
+        transition: right 0.3s ease;
+        z-index: 9999;
+    }
+
+    /* показываем гамбургер */
+    .menu-toggle {
+        display: block;
+        transition: all ease 0.3s;
+    }
+
+    .menu-toggle:hover {
+        color: #007BFF;
+    }
+
+    /* Когда меню открыто, сдвигаем навигацию внутрь */
+    .header-nav.open {
+        right: 0;
+    }
+
+    .header-nav nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .inside-menu-button {
+        padding: 15px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .for-coaches-btn {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-family: "BebasNeue-Regular";
+        font-size: 22.5px;
+        cursor: pointer;
+        transition: all ease 0.3s;
+    }
+
+    .start-now-btn {
+        display: none;
+    }
+
+    .for-coaches-btn:hover {
+        color: #007BFF;
+    }
+
+    .start-search .void {
+        display: none;
+    }
+
+    /* Стили для кнопки закрытия */
+    .header-nav .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1001;
+        transition: all ease 0.3s;
+    }
+
+    .close-menu:hover {
+        color: #007BFF;
+    }
+
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 15px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        width: 100%;
+    }
+
+    .hero-buttons button {
+        flex: 1;
+        width: 100%;
+    }
+
+    .sport-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    /* Опционально: убираем перенос строк, чтобы карточки шли в ряд */
+    .sport-grid .sport-card {
+        flex: 0 0 auto;
+        width: 250px;
+        margin-right: 20px;
+    }
+
+    .success-card-text-container {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 520px;
+        height: 500px;
+        background-color: #333B48;
+        z-index: 1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .btns {
+        padding-top: 349px;
+    }
+
+    .footer-cpr {
+        text-align: center;
+
+    }
+
+}
+
+/*Адаптив под телефон и ниже*/
+@media (max-width: 610px) {
+    .inside-menu-button {
+        gap: 24px;
+    }
+
+    .inside-menu-button button {
+        padding: 7px;
+    }
+
+    .start-now-btn {
+        display: block;
+        background-color: #FF8400;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "BebasNeue-Regular";
+        font-size: 22.5px;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .start-now-btn:hover {
+        color: #007BFF;
+    }
+
+    .start-search .orange {
+        display: none;
+    }
+
+    .hero {
+        height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 54.9px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .athletes-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .athletes-card {
+        width: 290px;
+    }
+
+    .process-card button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .success-card-text-container {
+        width: 390px;
+        height: 600px;
+        margin-top: 300px;
+    }
+
+    .success-card-text {
+        padding: 39px;
+    }
+
+    .btns {
+        padding-top: 650px;
+    }
+
+    /* Обертка для input и кнопки */
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 9px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* Поле ввода */
+    .text-input {
+        width: 100%;
+        padding: 10px;
+        padding-left: 20px;
+        padding-top: 35px;
+        background-color: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 132, 0, 0.80);
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        box-sizing: border-box;
+    }
+
+    /* Кнопка */
+    .btn-signin {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+        background-color: #FF8400;
+        color: white;
+        border: none;
+        font-size: 22.5px;
+        font-family: 'BebasNeue-Regular';
+        cursor: pointer;
+        transition: all ease 0.3s;
+        border-radius: 4px;
+    }
+
+    .input-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+
+}
+
+/*Адаптив под телефон и ниже*/
+@media (max-width:510px) {
+    .ourteam-pic {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ourteam-pic-item {
+        flex: 1 1 200px;
+        max-width: 350px;
+    }
+
+    .ourteam-pic img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .sign-up{
+        padding: 10px;
+    }
+
+    .footer{
+        padding: 20px;
+    }
+
+    .footer-section-2{
+        display: none;
+    }
+}
